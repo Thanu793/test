@@ -1,5 +1,7 @@
-@media (max-width:768px) {
-    margin-top: 20px;
+@media(max-width:600px){
+    body {
+        margin-top: 20px;
+  }
 }
 
 * { margin: 0px;
@@ -7,14 +9,12 @@
     padding: 0px;
   
     box-sizing: border-box;
-  
   }
   
   body {
     background-color: #4caf50;
   }
   .body-text {
-  
     display: flex;
   
     font-family: "Montserrat", sans-serif;
