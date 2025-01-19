@@ -48,7 +48,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #FFD700; /* Gold color on hover */
+  color: greenyellow; /* Gold color on hover */
 }
 
 .content {
