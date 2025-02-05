@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Proposal</title>
+    <link rel="stylesheet" href="styles.css">
+    
+   
+</head>
+<body>
+
+    <div class="image-container">
+        <img src="dog.jpg" alt="Valentine's Image">
+    </div>
+
+    <h1 id="question-text">Will you be my Valentine?</h1>
+
+    <div class="buttons">
+        <button class="btn yes-btn" onclick="showPopup()">Yes</button>
+        <button class="btn no-btn" onmouseover="moveNoButton()">No</button>
+    </div>
+
+    <div class="popup" id="popup">
+        <h2>You just made my world brighter!You've made me the happiest soul alive! my budi :)</h2>
+    </div>
+
+    <div class="hidden-container">
+        <h2>Thank you! Let's celebrate!</h2>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Music Controls -->
+    <div id="music-controls">
+        <button onclick="toggleMusic()">Play/Pause Music</button>
+    </div>
+
+
+    <script>
+        function moveNoButton() {
+            let noBtn = document.querySelector(".no-btn");
+            let x = Math.random() * window.innerWidth;
+            let y = Math.random() * window.innerHeight;
+            noBtn.style.left = x + "px";
+            noBtn.style.top = y + "px";
+        }
+
+        function showPopup() {
+            document.getElementById("popup").style.display = "block";
+            document.querySelector(".buttons").style.display = "none";
+            let music = document.getElementById("bg-music");
+            music.play(); // Play music when "Yes" is clicked
+
+            document.getElementById("music-controls").style.display = "block"; // Show play/pause button
+        }
+        function toggleMusic() {
+            let music = document.getElementById("bg-music");
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+
+    
+body{
+    text-align: center;
+    background-color: pink;
+    font-family: arial, sans-serif;
+}
+
+
+
+.container {
+    margin-top: 50px;}
+
+.image-container {
+    width: px;
+    height: auto;
+    border-radius: 10px;
+}
+
+h1{
+    font-size: 24px;
+    color: red;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.yes-btn {
+    background-color: green;
+    color: white;
+    box-shadow: 0px 0px 20px green;
+    margin-right: 5px;
+}
+
+.no-btn {
+    background-color: red;
+    color: white;
+    position: absolute;
+    box-shadow: 0px 0px 20px green;
+    margin-left: 5px;
+}
+
+.popup{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+    text-align: center;
+}
+
+.popup h2 {
+    font-size: 30px;
+    animation: colorchange 1s infinite;
+}
+
+@keyframes colorchange{
+    0% {color: red;}
+    25% {color: blue;}
+    50% {color: green;}
+    75% {color: orange;}
+    100% {color: purple;}
+}
+
+.hidden-container {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+}
+
+#music-controls {
+    margin-top: 20px;
+    display: none;
+    color: yellowgreen; /* Hidden until "Yes" is clicked */
+}
